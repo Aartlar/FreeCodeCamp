@@ -1,0 +1,361 @@
+html{
+  height: 100vw;
+  background-color: #666666;
+  -webkit-box-shadow: inset 0px 0px 36px 5px rgba(0,0,0,0.75);
+-moz-box-shadow: inset 0px 0px 36px 5px rgba(0,0,0,0.75);
+box-shadow: inset 0px 0px 36px 5px rgba(0,0,0,0.75);
+}
+
+body{
+  margin: 0;
+}
+
+a{
+  text-decoration: none;
+}
+
+#top-bar{
+  z-index: 1110;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display:flex;
+  padding: 0 10px;
+  background-color: #dddddd;
+  width:100%;
+  -webkit-box-shadow: inset 0px -3px 24px -5px rgba(0,0,0,0.75);
+-moz-box-shadow: inset 0px -3px 24px -5px rgba(0,0,0,0.75);
+box-shadow: inset 0px -3px 24px -5px rgba(0,0,0,0.75);
+}
+
+#top-bar h1{
+  margin-right: auto;
+  margin-left: 10px;
+  float: left;
+  color: red;
+  line-height:20px;
+  text-transform: uppercase;
+}
+
+#top-bar span{
+  font-size: 20px;
+  text-transform: capitalize;
+  color: #2a0433;
+}
+
+#top-bar ul{
+  list-style: none;
+  display: flex;
+  float: right;
+  margin-left: auto;
+  margin-right: 20px;
+  margin-top: 28px;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  color: #ffffff;
+}
+
+#top-bar a{
+  padding: 5px 10px;
+  text-decoration: none;
+  color: red;
+}
+
+#top-bar a:hover{
+  color: #49bc2f;
+  background-color: #ffffff;
+  border-radius: 8px;
+}
+
+#wrapper{
+  position: relative;
+  width 100%;
+  max-width: 1020px;
+  margin: auto;
+  background-color: white;
+}
+
+header{
+  background-image: url(http://www.pandoapartments.com.pl/var/upload/files/noclegi-w-krakowie.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: auto;
+  padding-bottom: calc(50%);
+}
+
+.sec-start{
+  position: relative;
+  text-align: center;
+  padding-top: 110px;
+  color: #000;
+  text-transform: uppercase;
+  font-family: sans-serif;
+}
+
+.sec-start:after{
+  content:"";
+  position: absolute;
+  display: block;
+  top: calc(100%);
+  left: calc(50% - 80px);
+  height: 2px;
+  width: 160px;
+  background-color: #666;
+}
+
+.sec-start:before{
+  content:"";
+  position: absolute;
+  display: block;
+  top: calc(100% + 10px);
+  left: calc(50% - 40px);
+  height: 3px;
+  width: 80px;
+  background-color: #000;
+}
+
+header h3{
+  padding-top: 50px;
+  padding-left: 50px;
+  color: #FFFFFF;
+}
+
+header p{
+  color: #eee;
+  background-color: rgba(0,0,0,0.7);
+  margin-left: 50px;
+  padding:20px;
+  max-width: calc(90% - 50px);
+  font-size: 20px;
+}
+
+#works{
+  background-color: #555;
+  width: 100%;
+  border-bottom: 80px solid #800080;
+}
+
+#works h2{
+  position: relative;
+  top: -70px;
+  padding: 25px 0;
+  background-color: #555;
+}
+
+#image-frame{
+  margin: 20px;
+  display: flex;
+  width 100%;
+  flex-wrap: wrap;
+}
+
+#image-frame img{
+  margin: auto;
+  margin-bottom: 30px;
+  border: 4px solid #00ff00;
+  border-radius: 10px;
+}
+
+#contact{
+  display: flex;
+}
+
+#phone{
+  position: relative;
+  width: 300px;
+  height: 600px;
+  background-color: #000;
+  margin: 30px;
+  border: 4px solid #aaa;
+  border-radius: 40px;
+}
+
+#phone:after{
+  content: "";
+  position: absolute;
+  top: 35px;
+  left: calc(50% - 20px);
+  width: 40px;
+  height: 4px;
+  background-color: #333;
+}
+
+#screen{
+  position: absolute;
+  top: 70px;
+  left: 20px;
+  width: 260px;
+  height: 440px;
+  padding-left: 15px;
+  background-color: #dddddd;
+  -webkit-box-shadow: inset 0px 0px 20px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: inset 0px 0px 20px 0px rgba(0,0,0,0.75);
+box-shadow: inset 0px 0px 20px 0px rgba(0,0,0,0.75);
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+#screen:after{
+  content: "";
+  position: absolute;
+  bottom: -65px;
+  left: calc(50% - 20px);
+  height: 40px;
+  width: 40px;
+  border: 1px solid #eee;
+  border-radius: 100%;
+}
+
+#screen:before{
+  content: "";
+  position: absolute;
+  bottom: -54px;
+  left: calc(50% - 9px);
+  height: 20px;
+  width: 20px;
+  border: 2px solid #eee;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+
+#screen h3{
+  text-align: center;
+  margin-left: -25px;
+  font-family: sans-serif;
+}
+
+#screen p{
+  margin-bottom: 0;
+}
+
+#screen input{
+  width: 220px;
+  padding: 5px 0;
+}
+
+textarea{
+  width: 220px;
+  height: 60px;
+}
+
+textarea::-webkit-scrollbar {
+    width: 0.5em;
+}
+
+textarea::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 3px rgba(0,0,0,0.3);
+}
+
+textarea::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+
+button{
+  width: 100px;
+  height: 30px;
+  margin-left: calc(50% - 65px);
+  margin-top: 10px;
+  background: #44c627;
+background: -moz-linear-gradient(top,  #44c627 0%, #82db76 100%);
+background: -webkit-linear-gradient(top,  #44c627 0%,#82db76 100%);
+background: linear-gradient(to bottom,  #44c627 0%,#82db76 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#44c627', endColorstr='#82db76',GradientType=0 );
+border: 0;
+  border-radius: 10px;
+}
+
+#sec-half{
+  transform: skew(-4deg);
+  position: relative;
+  width: calc(100% - 460px);
+  min-width: 320px;
+  background-color: #191970;
+  margin:50px;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+#sec-half:after{
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffff66;
+  transform: skew(8deg);
+  z-index: -1;
+}
+
+#contact h2{
+  text-align: center;
+  font-family: sans-serif;
+}
+
+#cool-looking-rectangle{
+  position: absolute;
+  top: 100px;
+  width: 0;
+  height: 0;
+  border-bottom: 250px solid red;
+  border-left: 227px solid transparent;
+  border-right: 227px solid transparent;
+}
+
+#handmade-facebook{
+  float: left;
+  transform: skew(4deg);
+  position: relative;
+  content: "";
+  width: 100px;
+  height: 100px;
+  background-color: #3B5998;
+  border-radius: 10px;
+}
+
+#handmade-facebook:after{
+  content: "";
+  position: absolute;
+  top: 30%;
+  left: 45%;
+  border-left: 17px solid #fff;
+  border-top: 17px solid #fff;
+  border-top-left-radius: 20px;
+  width: 25px;
+  height: 53px;
+}
+
+#handmade-facebook:before{
+  content: "";
+  position: absolute;
+  top: 60px;
+  left: 33px;
+  width: 45px;
+  height: 15px;
+  background-color: #fff;
+}
+
+#fb{
+  margin-left: 20px;
+  float: left;
+}
+
+footer{
+  position: relative;
+  top: -14px;
+  width: 100%;
+  height: 40px;
+  background-color: #008000;
+}
+
+footer:after{
+  position: absolute;
+  top: 100%;
+  content: "";
+  width: 100%;
+  height: 13px;
+  background-color: #008000;
+}
