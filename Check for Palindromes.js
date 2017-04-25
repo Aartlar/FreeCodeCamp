@@ -1,19 +1,10 @@
 function palindrome(str) {
-  var rdyStr = str.replace(/[_\W]+/g, "");
-  var newStr = rdyStr.toLowerCase();
-  var example;
+  var newStr = str.replace(/[_\W]+/g, "").toLowerCase();
+  var halfStr = newStr.split("").reverse().join("").split(newStr.length / 2);
 
-  for (var i = 0; i < newStr.length;) {
-    if (newStr[i] === newStr[newStr.length - 1 - i]) {
-      example = true;
-      i++;
-    } else {
-      return false;
-    }
-  }
-  return example;
+  return newStr.includes(halfStr);
 }
 
 
 
-palindrome("E-ye#");
+palindrome("not a palindrome");
