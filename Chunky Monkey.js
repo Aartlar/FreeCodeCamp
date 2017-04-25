@@ -17,3 +17,15 @@ function chunkArrayInGroups(arr, size) {
 }
 
 chunkArrayInGroups([0, 1, 2, 3, 4, 5], 4);
+
+//rozwiązanie z przed przerwą:
+
+function chunkArrayInGroups(arr, size) {
+  var newArr = [];
+  for (var i = 0; i < arr.length / size; i++) {
+    newArr[i] = arr.slice(i * size, i * size + size);
+  }
+  return newArr;
+}
+
+chunkArrayInGroups([0, 1, 2, 3, 4, 5], 3);
