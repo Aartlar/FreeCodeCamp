@@ -1,10 +1,10 @@
-
 function factorialize(num) {
-  var subReturn = 1;
-  for (var i = 1; i <= num; i++) {
-    subReturn = subReturn * i;
+  var newNum = num;
+  if (newNum <= 0) {
+    return 1;
+  } else {
+    return num * factorialize(num - 1);
   }
-  return subReturn;
 }
 
 factorialize(5);
