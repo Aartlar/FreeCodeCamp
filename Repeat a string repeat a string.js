@@ -1,11 +1,5 @@
 function repeatStringNumTimes(str, num) {
-  var example = "";
-  if (num > 0) {
-    for (var i = 0; i < num; i++) {
-      example += str;
-    }
-  }
-  return example;
+  return num > 0? str.repeat(num) : "";
 }
 
 repeatStringNumTimes("abc", 3);
