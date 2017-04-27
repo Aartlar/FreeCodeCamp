@@ -5,3 +5,15 @@ function reverseString(str) {
 }
 
 reverseString("hello");
+
+// bez split reverse i join
+
+function reverseString(str) {
+  var newStr = "";
+  for (var i = str.length - 1; i >= 0; i--) {
+    newStr += str[i];
+  }
+  return newStr;
+}
+
+reverseString("hello");
