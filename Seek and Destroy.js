@@ -16,3 +16,15 @@ function destroyer(arr) {
 }
 
 destroyer([1, 2, 3, 1, 2, 3], 2, 3);
+
+
+// V2
+
+function destroyer(arr) {
+  var serached = Array.prototype.slice.call(arguments,1);
+  return arguments[0].filter(function(element, index, array){
+    return !serached.includes(element);
+  });
+}
+
+destroyer([1, 2, 3, 1, 2, 3], 2, 3);
