@@ -1,22 +1,14 @@
-function countBs(string) {
-	var newStr = 0;
-	for (var i = 0; i < string.length; i++) {
-      if (string[i] === 'B') {
-        newStr++;
-      }
-    }
-  	return newStr;
-};
+function countBs(value) {
+  return value.split("").filter(function(element) {
+    return element === "B";
+  }).length;
+}
 
-function countChar(string, letter) {
-	var newStr = 0;
-	for (var i = 0; i < string.length; i++) {
-      if (string[i] === letter) {
-        newStr++;
-      }
-    }
-  	return newStr;
-};
+function countChar(value, serached) {
+  return value.split("").filter(function(element) {
+    return element === serached;
+  }).length;
+}
 
 console.log(countBs("BBC"));
 // → 2
