@@ -1,27 +1,17 @@
 function range(a, b, c) {
-  var c = arguments[2];
-  var result = [];
-  if (c === undefined) {
-    c = 1;
+  c === undefined? c = 1 : c;
+  var arr = [];
+  for (a; a !== b; a += c) {
+    arr.push(a);
   }
-  if (a > b) {
-    for (; a >= b; a += c) {
-    result.push(a);
-    }
-  } else {
-    for (; a <= b; a += c) {
-    result.push(a);
-    }
-  }
-  return result;
+  arr.push(b);
+  return arr;
 };
 
 function sum(range) {
-   var result = 0;
-   for (var i = 0; i < range.length; i++) {
-     result += range[i];
-   }
-   return result;
+   return range.reduce(function(previous, current) {
+     return previous += current;
+   });
  };
 
 console.log(range(1, 10));
