@@ -1,11 +1,18 @@
 function reverseArray(arr) {
-  var newArr = arr.reverse();
-  return newArr;
-};
+  var newArray = [];
+  for (var i = arr.length - 1; i >= 0; i--) {
+    newArray.push(arr[i]);
+  }
+  return newArray;
+}
 
 function reverseArrayInPlace(arr) {
-  arrayValue = arr.reverse();
-};
+  for (var i = arr.length - 2; i >= 0; i--) {
+    arr.push(arr[i]);
+    arr.splice(i,1);
+  }
+  return arr;
+}
 
 console.log(reverseArray(["A", "B", "C"]));
 // → ["C", "B", "A"];
