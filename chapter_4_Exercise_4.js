@@ -41,3 +41,36 @@ console.log(deepEqual(obj, {here: 1, object: 2}));
 // → false
 console.log(deepEqual(obj, {here: {is: "an"}, object: 2}));
 // → true
+
+//v2 Wiedziałem że da się to zrobić łatwiej! ;)
+
+function deepEqual(a, b) {
+  if (a === b) return true;
+  
+  if (a === null || b === null ||
+      typeof a !== "object" || typeof b !== "object")
+    return false;
+  
+  var propsA = 0;
+  var propsB = 0;
+
+  for (var prop in a) {
+    propsA += 1;
+  }
+
+  for (var prop in b) {
+    propsB += 1;
+    if (!(prop in a) || !deepEqual(a[prop], b[prop]))
+      return false;
+  }
+
+  return propsA == propsB;
+}
+
+var obj = {here: {is: "an"}, object: 2};
+console.log(deepEqual(obj, obj));
+// → true
+console.log(deepEqual(obj, {here: 1, object: 2}));
+// → false
+console.log(deepEqual(obj, {here: {is: "an"}, object: 2}));
+// → true
