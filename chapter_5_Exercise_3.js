@@ -15,6 +15,29 @@ ancestry.forEach(function(person){
 
 console.log(centures);
 
+function groupBy(arr, fun) {
+  var ages = fun(arr);
+  ages.forEach(function(age){
+    var ageArr = [];
+    arr.filter(function(person){
+      return Math.ceil(person.died / 100) === age? true : false;
+    }).forEach(function(person){
+      ageArr.push(person.died - person.born);
+    });
+    var ageMedian = average(ageArr);
+    console.log("{" + age + " : " + ageMedian + "}");
+  });
+}
+
+console.log(groupBy(ancestry, function(persons){
+  var c1 = [];
+  for (var i = 0; i < persons.length; i++) {
+  	var c2 = Math.ceil(persons[i].died / 100);
+    if (!c1.includes(Math.ceil(c2))) c1.push(c2);
+  }
+  return c1.sort();
+}));
+
 // → 16: 43.5
 //   17: 51.2
 //   18: 52.8
